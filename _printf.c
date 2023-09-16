@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * print_all - prints like printf
+ * _printf - prints like printf
  * @format: argument for the function
+ * Return: the char_p
  */
 int _printf(const char *format, ...)
 {
@@ -32,6 +33,6 @@ int _printf(const char *format, ...)
 		}
 		format++;
 		va_end(list);
-		retrun(char_p);
+		return (char_p);
 	}
 }
