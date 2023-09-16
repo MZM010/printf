@@ -6,7 +6,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int char_p = 0, len = 0;
+	int char_p = 0;
 	va_list list;
 
 	va_start(list, format);
@@ -23,11 +23,14 @@ int _printf(const char *format, ...)
 				case '\0':
 					break;
 				case '%':
-					check_null(list);
+					check_null(list, char_p);
+					break;
 				case 'c':
 					print_char(list, char_p);
+					break;
 				case 's':
 					print_string(list, char_p);
+					break;
 			}
 		}
 		else
