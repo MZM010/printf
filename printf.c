@@ -23,17 +23,17 @@ int _printf(const char *format, ...)
 				case '\0':
 					break;
 				case '%':
-					check_null(char_p);
+					check_null(list);
 				case 'c':
 					print_char(list, char_p);
 				case 's':
-					print_string(len, list, char_p);
+					print_string(list, char_p);
 			}
 		}
 		else
 		{
-			write(1, format, 1)
-				char_p++;
+			write(1, format, 1);
+			char_p++;
 		}
 		format++;
 		va_end(list);
@@ -41,4 +41,3 @@ int _printf(const char *format, ...)
 
 	return (char_p);
 }
-

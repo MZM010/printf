@@ -10,7 +10,6 @@
  */
 int print_string(va_list list, int char_p)
 {
-	int i = 0;
 	const char *str = va_arg(list, char*);
 
 	if (*str != '\0')
