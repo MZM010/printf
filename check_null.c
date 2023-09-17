@@ -9,17 +9,12 @@
  * Return: The incremented value of char_p.
  */
 
-int check_null(va_list list, int char_p)
+int check_null(va_list list)
 {
 	int c;
-
 	c = va_arg(list, int);
 
-	while(!c)
-	{
-		write(1, &c, 1);
-		char_p++;
-	}	
-	return (char_p);
-}
+	write(1, &c, 1);
+	char_p++;
+	return (char_p ++);
 
