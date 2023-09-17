@@ -15,10 +15,14 @@ int _printf(const char *format, ...)
 			{
 				case '%':
 					print_percent(counter);
+					break;
 				case 'c':
 					print_char(list, counter);
+					break;
 				case 's':
 					print_string(list, counter);
+					break;
+
 			}
 		}
 		else
