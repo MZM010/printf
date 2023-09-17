@@ -12,6 +12,7 @@ int my_putchar(char c);
 int print_char(va_list list);
 int print_string(va_list list);
 int print_percent();
-
+int print_int(int n);
+int print_decimal(va_list list);
 #endif /* MAIN_H */
 

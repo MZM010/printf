@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 			format++;
 			switch(*format)
 			{
-				case '\0':
+				case 'i':
+					counter += print_decimal(list);
 					break;
 				case '%':
 					counter += print_percent();
