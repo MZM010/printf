@@ -12,9 +12,7 @@ int print_string(va_list list, int char_p)
 {
 	const char *str = va_arg(list, char*);
 
-	if (str == NULL)
-		return (0);
-	if (*str)
+	while (*str)
 	{
 		write(1, &str, 1);
 		str++;

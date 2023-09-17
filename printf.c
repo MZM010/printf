@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 	va_list list;
 
 	va_start(list, format);
-
+	
 	if (!format)
 		return (-1);
 	while (*format)
@@ -24,13 +24,10 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					check_null(list, char_p);
-					continue;
 				case 'c':
-					print_char(list, char_p);
-					continue;
+					print_char(list);
 				case 's':
 					print_string(list, char_p);
-					continue;
 			}
 		}
 		else
@@ -41,6 +38,5 @@ int _printf(const char *format, ...)
 		format++;
 		va_end(list);
 	}
-
 	return (char_p);
 }
