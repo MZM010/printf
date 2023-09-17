@@ -24,13 +24,13 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					check_null(list, char_p);
-					break;
+					continue;
 				case 'c':
 					print_char(list, char_p);
-					break;
+					continue;
 				case 's':
 					print_string(list, char_p);
-					break;
+					continue;
 			}
 		}
 		else
