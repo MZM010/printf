@@ -9,7 +9,7 @@ int print_string(va_list list)
 
 	if(!my_string)
 		my_string = "";
-	if(*my_string)
+	while(*my_string)
 	{
 		my_putchar(*my_string);
 		my_string++;
