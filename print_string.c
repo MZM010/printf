@@ -1,21 +1,17 @@
 #include "main.h"
 
-/**
- * print_string - print the string
- * @str: length
- * @list: list
- * @char_p: the normal value
- * Return: return the value of char_p
- *
- */
-int print_string(va_list list, int char_p)
-{
-	char *str = va_arg(list, char*);
 
-	while(*str)
+int print_string(va_list list, int counter)
+{
+	const char *my_string = va_arg(list, const char*);
+
+	if(my_string != NULL)
+		my_string = "";
+	if(*my_string)
 	{
-		write(1, str, 1);
-		char_p++;
+		my_putchar(*my_string);
+		my_string++;
+		counter++;
 	}
-	return (char_p);
+	return (counter);
 }

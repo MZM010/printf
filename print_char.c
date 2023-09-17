@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * print_char - print the char
- *
- * @list: list of argument
- * @char_p: normal value
- * Return: teh value of the normal value
+ * printf_char - Print a character
+ * @list: The va_list that contains the character to print
+ * Return: Number of characters printed (always 1)
  */
-int print_char(va_list list, int char_p)
+int print_char(va_list list, int counter)
 {
 	int c;
 
 	c = va_arg(list, int);
-	write(1, &c, 1);
-	char_p++;
-	return (char_p);
+
+	counter++;
+	my_putchar(c);
+
+	return (0);
 }
