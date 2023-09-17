@@ -9,9 +9,9 @@
 
 int _printf(const char *format, ...);
 int my_putchar(char c);
-int print_char(va_list list, int counter);
-int print_string(va_list list, int counter);
-int print_percent(int counter);
+int print_char(va_list list);
+int print_string(va_list list);
+int print_percent();
 
 #endif /* MAIN_H */
 

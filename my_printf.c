@@ -14,13 +14,13 @@ int _printf(const char *format, ...)
 			switch(*format)
 			{
 				case '%':
-					print_percent(counter);
+					counter += print_percent();
 					break;
 				case 'c':
-					print_char(list, counter);
+					counter += print_char(list);
 					break;
 				case 's':
-					print_string(list, counter);
+					counter += print_string(list);
 					break;
 
 			}
