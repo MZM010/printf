@@ -20,6 +20,6 @@ int check_null(va_list list, int char_p)
 		write(1, &c, 1);
 		char_p++;
 	}	
-	return (1);
+	return (char_p);
 }
 
