@@ -1,4 +1,11 @@
 #include "main.h"
+/**
+ * _printf - Custom the printf function.
+ *
+ * @format: The format string
+ * @...: Optional arguments
+ * Return: The total number of characters printed.
+ */
 
 int _printf(const char *format, ...)
 {
@@ -6,12 +13,12 @@ int _printf(const char *format, ...)
 	int counter = 0;
 
 	va_start(list, format);
-	while(*format)
+	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			switch(*format)
+			switch (*format)
 			{
 				case 'd':
 					counter += print_decimal(list);
@@ -20,7 +27,7 @@ int _printf(const char *format, ...)
 					counter += print_decimal(list);
 					break;
 				case '%':
-					counter += print_percent();
+					counter += print_percent(list);
 					break;
 				case 'c':
 					counter += print_char(list);

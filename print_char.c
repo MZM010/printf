@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_char - Print a character
+ * print_char - Print a character
  * @list: The va_list that contains the character to print
  * Return: Number of characters printed (always 1)
  */

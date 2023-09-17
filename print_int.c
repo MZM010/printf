@@ -14,14 +14,14 @@ int print_int(int n)
 
 	if (n < 0)
 	{
-		my_putchar('-');
+		my_putchar(45);
 		count++;
 		num = -n;
-	} else
+	}
+	else
 	{
 		num = n;
 	}
-
 	if (num / 10)
 	{
 		count += print_int(num / 10);
@@ -34,7 +34,7 @@ int print_int(int n)
 }
 
 /**
- * printf_decimal - Print an integer from the va_list
+ * print_decimal - Print an integer from the va_list
  * @list: The va_list containing the integer to be printed
  *
  * Return: Number of characters printed
@@ -42,7 +42,7 @@ int print_int(int n)
 
 int print_decimal(va_list list)
 {
-	int value = va_arg(list, int);
+	unsigned int value = va_arg(list, int);
 
 	return (print_int(value));
 }
