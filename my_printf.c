@@ -33,8 +33,6 @@ int _printf(const char *format, ...)
 				case 's':
 					counter += print_string(list);
 					break;
-				default:
-					break;
 			}
 		}
 		else
