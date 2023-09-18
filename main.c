@@ -13,7 +13,9 @@ int main(void)
     int len2;
     unsigned int ui;
     void *addr;
-
+    char *null_str = NULL;
+    int len_1;
+    int len_2;
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
@@ -38,5 +40,10 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
+
+    len_1 = printf("Expected output:    %s\n", null_str);
+    printf("Expected length:    [%d]\n", len_1);
+    len_2 = printf("Expected output:    %s\n", null_str);
+    printf("Expected length:    [%d]\n", len_2);
     return (0);
 }

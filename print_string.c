@@ -12,7 +12,7 @@ int print_string(va_list list)
 	const char *my_string = va_arg(list, const char*);
 
 	if (!my_string)
-		my_string = "";
+		my_string = "(null)";
 	while (*my_string)
 	{
 		my_putchar(*my_string);
