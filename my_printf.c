@@ -14,28 +14,15 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 	if (!format || (format[0] == '%' && !format[1]))
-       		return (-1);
+		return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			switch (*format)
-			{
-				case 'd':
-				case 'i':
-					counter += print_decimal(list);
-					break;
-				case '%':
-					counter += print_percent(list);
-					break;
-				case 'c':
-					counter += print_char(list);
-					break;
-				case 's':
-					counter += print_string(list);
-					break;
-			}
+			counter += handler(&format, list);
 		}
 		else
 		{
