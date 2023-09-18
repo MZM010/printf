@@ -15,6 +15,8 @@ int handler(const char **format, va_list list)
 
 	switch (**format)
 	{
+		case '\0':
+			break;
 		case 'd':
 		case 'i':
 			counter += print_decimal(list);
