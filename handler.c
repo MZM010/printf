@@ -27,9 +27,15 @@ int handler(const char **format, va_list list)
 		case 'c':
 			counter += print_char(list);
 			break;
+		case 'u':
+			counter += print_unsigned(list);
+			break;
+		case 'r':
+			counter += print_rev(list);
+			break;
 		case 's':
 			counter += print_string(list);
-			break;
+			break;	
 	}
 	return (counter);
 }
