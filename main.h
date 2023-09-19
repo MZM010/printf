@@ -21,5 +21,6 @@ int print_rev(va_list list);
 int print_oct(va_list list);
 int print_X(va_list list);
 int print_x(va_list list);
+int print_address(va_list list);
 #endif /* MAIN_H */
 

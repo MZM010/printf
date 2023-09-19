@@ -44,6 +44,9 @@ int handler(const char **format, va_list list)
 			break;
 		case 'X':
 			counter += print_X(list);
+		case 'p':
+			counter += print_address(list);
+			break;
 	}
 	return (counter);
 }
