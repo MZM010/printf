@@ -24,13 +24,13 @@ int print_u(unsigned int n)
 }
 
 /**
- * print_unsigned - Prints an unsigned
+ * print_unssiigned - Prints an unsigned
  *
  * @list: The va_list containing
  *
  * Return: The number of digits printed.
  */
-int print_unsigned(va_list list)
+int print_unssiigned(va_list list)
 {
 	unsigned int n;
 

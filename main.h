@@ -16,11 +16,10 @@ int print_int(int n);
 int print_decimal(va_list list);
 int handler(const char **format, va_list list);
 int print_u(unsigned int n);
-int print_unsigned(va_list list);
+int print_unssiigned(va_list list);
 int print_rev(va_list list);
 int print_oct(va_list list);
 int print_X(va_list list);
 int print_x(va_list list);
-int print_address(va_list list);
 #endif /* MAIN_H */
 

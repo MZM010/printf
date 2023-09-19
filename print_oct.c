@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * printf_oct - Prints an unsigned integer in octal format.
+ * print_oct - Prints an unsigned integer in octal format.
  *
  * @list: The va_list containing the unsigned integer argument.
  *
@@ -12,11 +12,11 @@ int print_oct(va_list list)
 	int len = 0, i = 0;
 	int octal[150];
 	int octall = 0;
-	do
-	{
+
+	do {
 		octal[i++] = n % 8;
 		n /= 8;
-	}while (n != 0);
+	} while (n != 0);
 
 	if (i == 0)
 	{
