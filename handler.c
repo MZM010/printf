@@ -38,7 +38,12 @@ int handler(const char **format, va_list list)
 			break;
 		case 's':
 			counter += print_string(list);
-			break;	
+			break;
+		case 'x':
+			counter += print_x(list);
+			break;
+		case 'X':
+			counter += print_X(list);
 	}
 	return (counter);
 }
