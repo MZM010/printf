@@ -33,6 +33,9 @@ int handler(const char **format, va_list list)
 		case 'r':
 			counter += print_rev(list);
 			break;
+		case 'o':
+			counter += print_oct(list);
+			break;
 		case 's':
 			counter += print_string(list);
 			break;	
