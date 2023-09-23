@@ -21,6 +21,5 @@ int print_rev(va_list list);
 int print_oct(va_list list);
 int print_X(va_list list);
 int print_x(va_list list);
-int print_convert(unsigned int b);
 #endif /* MAIN_H */
 
